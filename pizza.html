@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Pizza</h1>
+    <img src="pizza.jpg" alt="Klassisk pizza">
+    
+    <h4>Ingredienser:</h4>
+    <div id="ingrediensContainer"></div>
+    <div id="stepsContainer"></div>
+</body>
+</html>
+<script>
+    var str = '<ul>'
+    var ingredienser = ['Cheese', 'Water', 'Salt', 'Sauce', 'Yeast','Flour'];
+    
+    ingredienser.forEach(function(ingrediens){
+        str += '<li>' + ingrediens + '</li>'; 
+    }); 
+    str += '</ul>'
+    document.getElementById("ingrediensContainer").innerHTML = str; 
+    
+var steps = ['Mix salt, water, yeast and flour', 'Wait for dough to rise', 'Make pizza']; 
+
+var str2 = '<ol>'
+steps.forEach(function(step){
+        str2 += '<li>' + step + '</li>'; 
+    }); 
+    str2 += '</ol>'
+    document.getElementById("stepsContainer").innerHTML = str2; 
+    
+
+</script>
